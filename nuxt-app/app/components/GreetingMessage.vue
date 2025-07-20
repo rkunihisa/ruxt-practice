@@ -6,22 +6,22 @@
 </template>
 
 <script setup>
-  const props = defineProps({
-    greeting: {
-      type: String,
-      required: true,
-      default: 'こんにちは'
-    },
-    name: {
-      type: String,
-      required: true,
-    },
-    message: {
-      type: String,
-      required: false,
-      default: ''
-    }
-  });
+defineProps({
+  greeting: {
+    type: String,
+    required: false,
+    default: 'こんにちは'
+  },
+  name: {
+    type: String,
+    required: true,
+  },
+  message: {
+    type: String,
+    required: false,
+    default: ''
+  }
+});
 </script>
 
 <style scoped>
