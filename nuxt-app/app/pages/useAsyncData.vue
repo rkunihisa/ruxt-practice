@@ -8,6 +8,7 @@
       <h2>Fetched Data</h2>
       <pre>{{ data }}</pre>
     </div>
+    <button @click="refresh">データ再取得</button>
   </div>
 </template>
 
