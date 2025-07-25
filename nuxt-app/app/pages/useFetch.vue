@@ -16,7 +16,12 @@
 </template>
 
 <script setup>
-const { data: users, pending, error } = useFetch('users', {
+const searchQuery = ref('');
+
+const { data: users, pending, error } = useFetch('/users', {
   baseURL: $api.defaults.baseURL,
+  query: {
+    name: searchQuery
+  }
 });
 </script>
