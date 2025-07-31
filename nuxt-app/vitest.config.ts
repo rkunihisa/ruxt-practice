@@ -5,4 +5,7 @@ export default defineConfig({
     plugins: [
         vue() // Vueファイルを解析するプラグイン
     ],
+    test: {
+        environment: 'jsdom', // Vueコンポーネントのテストに必要
+    },
 });
