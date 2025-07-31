@@ -12,4 +12,15 @@ describe('SimpleMessage.vue', () => {
 
         expect(wrapper.text()).toBe('Hello, Test User');
     });
+
+    it('renders the default message when no name is provided', () => {
+        const wrapper = mount(SimpleMessage, {
+            props: {
+                name: 'Smith',
+                greeting: 'Welcome to the app!'
+            }
+        });
+
+        expect(wrapper.text()).toBe('Welcome to the app!, Smith');
+    });
 });
